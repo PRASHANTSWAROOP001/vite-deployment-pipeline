@@ -1,25 +1,18 @@
-FROM ubuntu:focal
+FROM node:22-alpine
 
-RUN apt-get update
-RUN apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_20.x | bash -
-RUN apt-get upgrade -y
-RUN apt-get install -y nodejs
-RUN apt-get install git -y
-
+# Install curl, git, and dos2unix
+RUN apk add --no-cache git curl dos2unix
 
 WORKDIR /home/app
 
-COPY main.sh main.sh
-
-COPY  script.js script.js
-
-COPY package*.json .
-
+COPY package*.json ./
 RUN npm install
 
-RUN chmod +x main.sh
+COPY main.sh script.js ./
 
-RUN chmod +x script.js
+# 👇 Fix Windows CRLF -> Linux LF
+RUN dos2unix main.sh script.js
 
-ENTRYPOINT [ "/home/app/main.sh" ]
+RUN chmod +x main.sh script.js
+
+ENTRYPOINT ["/home/app/main.sh"]
