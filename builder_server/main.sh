@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 export GIT_REPOSITORY_URL="$GIT_REPOSITORY_URL"
 
