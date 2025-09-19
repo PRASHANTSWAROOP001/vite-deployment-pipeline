@@ -19,8 +19,8 @@ const ecsClient = new ECSClient({
 })
 
 const config ={ 
-    CLUSTER:"arn:aws:ecs:ap-south-1:595263720847:cluster/react-pipeline",
-    TASK:"arn:aws:ecs:ap-south-1:595263720847:task-definition/react-app-task:2"
+    CLUSTER:process.env.CLUSTER_ARN,
+    TASK:process.env.TASK_ARN
 }
 
 
@@ -43,8 +43,8 @@ app.use("/deploy", async (req, res)=>{
         networkConfiguration:{
              awsvpcConfiguration:{
                  assignPublicIp:"ENABLED",
-                 subnets:['subnet-0d6267dc0d587fe51', 'subnet-07c225f4e2e645278', 'subnet-0641f7e6ae08f4e8b'],
-                 securityGroups:["sg-00e287eee60c2450c"]
+                 subnets:['subnet-', 'subnet-', 'subnet-'],
+                 securityGroups:["sg-"]
              }
         },
         overrides:{
