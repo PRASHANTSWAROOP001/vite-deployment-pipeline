@@ -1,7 +1,7 @@
 
 
 ## 🚀 React Deployment Pipeline
-
+---
 ### 📑 Table of Contents
 - [Introduction](#introduction)
 - [Architecture](#architecture)
@@ -19,6 +19,7 @@
 - [📌 Notes](#-notes)
 - [🚀 Final Thoughts](#-final-thoughts)
 
+---
 
 ### Introduction
 
