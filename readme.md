@@ -1,4 +1,24 @@
+
+
 ## 🚀 React Deployment Pipeline
+
+### 📑 Table of Contents
+- [Introduction](#introduction)
+- [Architecture](#architecture)
+- [Tech Stack](#tech-stack)
+- [Key Features & Enhancements](#key-features--enhancements)
+- [How It Works](#how-it-works)
+- [Benefits](#benefits)
+- [Configuration](#configuration)
+  - [.env (Container)](#env-container)
+  - [.env (Deployment Server)](#env-deployment-server)
+- [⚡ Quick Start](#-quick-start)
+- [🎥 Demo](#-demo)
+- [📚 What I Learned](#-what-i-learned)
+- [🤝 Contributing](#-contributing)
+- [📌 Notes](#-notes)
+- [🚀 Final Thoughts](#-final-thoughts)
+
 
 ### Introduction
 
