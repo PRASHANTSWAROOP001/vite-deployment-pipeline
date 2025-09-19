@@ -11,8 +11,9 @@ The pipeline intelligently detects React + Vite projects, builds them, and uploa
 ---
 
 ### Architecture
+<img width="821" height="513" alt="diagram for react pipeline" src="https://github.com/user-attachments/assets/57e940f7-8725-47a8-8537-5f63fbecac38" />
 
-![Architecture Diagram](../diagram%20for%20react%20pipeline.png)
+
 
 *The diagram illustrates the sequence from source code to production deployment, leveraging containerization and AWS services.*
 
@@ -57,3 +58,4 @@ The pipeline intelligently detects React + Vite projects, builds them, and uploa
 * **Reliable:** Containerization ensures reproducible builds and fewer runtime issues.
 
 ---
+
