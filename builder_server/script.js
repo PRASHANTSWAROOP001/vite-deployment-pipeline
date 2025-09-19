@@ -12,7 +12,7 @@ const client = new S3Client({
 
 const PROJECT_ID = process.env.PROJECT_ID
 if (!PROJECT_ID) {
-  console.error("❌ PROJECT_ID is required")
+  console.error("PROJECT_ID is required")
   process.exit(1)
 }
 
@@ -66,11 +66,11 @@ async function uploadToS3(distPath) {
 
 // ---- Main flow ----
 async function init() {
-  console.log("🚀 Starting build pipeline")
+  console.log("Starting build pipeline")
   const outDirPath = path.join(__dirname, "output")
 
   if (!isViteReactProject(outDirPath)) {
-    console.error("❌ Not a Vite React project")
+    console.error(" Not a Vite React project")
     process.exit(1)
   }
 
@@ -83,10 +83,10 @@ async function init() {
     const distPath = path.join(outDirPath, "dist")
     await uploadToS3(distPath)
 
-    console.log("🎉 Build + Upload complete")
-    console.log(`🌐 Test URL: https://${process.env.BUCKET_NAME}.s3.amazonaws.com/${PROJECT_ID}/index.html`)
+    console.log(" Build + Upload complete")
+    console.log(` Test URL: https://${process.env.BUCKET_NAME}.s3.amazonaws.com/${PROJECT_ID}/index.html`)
   } catch (err) {
-    console.error("❌ Pipeline failed:", err.message)
+    console.error(" Pipeline failed:", err.message)
     process.exit(1)
   }
 }

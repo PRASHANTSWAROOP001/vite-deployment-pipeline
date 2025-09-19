@@ -10,7 +10,7 @@ RUN npm install
 
 COPY main.sh script.js ./
 
-# 👇 Fix Windows CRLF -> Linux LF
+
 RUN dos2unix main.sh script.js
 
 RUN chmod +x main.sh script.js
